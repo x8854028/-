@@ -1,0 +1,229 @@
+*{
+ margin:0;
+  padding: 0;
+  list-style: none;
+}
+@img:'./images/';
+.w(){
+  width: 100%;
+  height:100% ;
+  position: absolute;
+  overflow: hidden;
+}
+html,body{
+  .w();
+}
+.loadingBox{
+  .w();
+  background:#000 ;
+  z-index: 30;
+  color: #fff;
+  transition: all 0.8s 1s;
+  header{
+    position: relative;
+    top: 25%;
+    text-align: center;
+    h2{
+      font-size:0.7rem;
+    }
+    h3{
+      font-size: 0.5rem;
+    }
+  }
+  .progressBox{
+    width: 80%;
+    margin: auto;
+    border-radius:0.2rem ;
+    height: 0.4rem;
+    position: relative;
+    top: 54%;
+    background: #fff;
+    overflow: hidden;
+    .progressBar{
+      transition:width 1s;
+      width: 30%;
+      height: 0.4rem;
+      background: linear-gradient(45deg,green 0%,green 25%, yellowGreen 25%, yellowGreen 50%,green 50%,green 75%,yellowGreen 75%, yellowGreen 100%);
+      background-size:0.4rem 0.4rem ;
+    }
+  }
+}
+.hidden{
+  display: none;;
+
+}
+.phoneBox{
+  .w();
+  z-index: 25;
+  background: url("@{img}phone-bg.jpg") center;
+  background-size: cover;
+  transition: all 1s;
+  header{
+    color: #fff;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  h2{
+    font-size: 0.7rem;
+  }
+  h3{
+    font-size: 0.25rem;
+  }
+  h4{
+    font-size: 0.5rem;
+  }
+  .listenBox{
+    width: 5.2rem;
+    height: 3.6rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -2.6rem;
+    bottom: 0.3rem;
+    background: url("@{img}phone-listen.png" ) center;
+    background-size: contain;
+    .listenBtn{
+      width: 1.6rem;
+      height: 1.6rem;
+      position: absolute;
+      right: -0.08rem;
+      bottom: 0.45rem;
+      border:1px solid #4cd864 ;
+      border-radius: 50%;
+      animation: move 1s infinite;
+    }
+
+  }
+}
+  .no_listenBox{
+    position: absolute;
+    transform: translateY(7rem);
+    transition: transform 1s;
+    bottom: 0.3rem;
+    width: 5.2rem;
+    height: 6.6rem;
+    left: 50%;
+    margin-left: -2.6rem;
+    background: url('@{img}phone-key.png')center;
+    background-size: contain;
+    .no_listenBtn{
+      position: absolute;
+      width: 1.6rem;
+      height: 1.6rem;
+      bottom: 0.2rem;
+      left: 50%;
+      margin-left:-0.8rem ;
+    }
+  }
+
+@keyframes move {
+  0%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(0.8);
+  }
+}
+.msgBox{
+  .w();
+  background: #eaeaea;
+  padding-top:0.4rem ;
+  ul{
+    li{
+      overflow: hidden;
+      margin-bottom: 0.4rem;
+      transform: translateY(1rem);
+      opacity: 0;
+      transition: all 0.3s;
+      div{
+        max-width: 3.6rem;
+        padding: 0.25rem;
+        border: 0.02rem solid #cacaca;
+        font-size: 0.26rem;
+        float: left;
+        border-radius: 0.1rem;
+        background: #fff;
+        position: relative;
+        left: 1.25rem;
+        &::before{
+          content: '';
+
+          width: 0.1rem;
+          height: 0.2rem;
+          display: block;
+          background: url("@{img}message-arrow1.png") no-repeat;
+          position: absolute;
+          background-size: contain;
+          top: 0.2rem;
+          left: -0.1rem;
+
+        }
+
+        img{
+          width: 0.82rem;
+          height: 0.82rem;
+          border-radius: 50%;
+          overflow: hidden;
+          position: absolute;
+          left: -1rem;
+          top: 0;
+        }
+      }
+
+
+    }
+    li.right{
+      div{
+        float:right ;
+        right: 1.25rem;
+        left: auto;
+        background: #a0e55f;
+        border-color:#93b474 ;
+        &::before{
+          background: url("@{img}message-arrow2.png" )no-repeat;
+          background-size: contain;
+          top: 0.2rem;
+          left: auto;
+          right: -0.1rem;
+
+
+        }
+        img{
+          left: auto;
+          right: -1rem;
+        }
+      }
+
+
+
+    }
+
+  }
+  .keyBoard{
+    width: 6.4rem;
+    height: 5.16rem;
+    background: url("@{img}message-keyboard.png");
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(3.7rem);
+    transition: all 0.6s 1s ;
+    .textBox{
+      width: 4rem;
+      height: 0.4rem;
+      position: absolute;
+      top: 0.35rem;
+      left: 0.9rem;
+      font-size: 0.25rem;
+    }
+    .btn{
+      width: 1.47rem;
+      height: 0.74rem;
+      position: absolute;
+      right: 0.1rem;
+      bottom: 0.6rem;
+      background: url("@{img}message-chatBtn.png");
+      background-size: contain;
+    }
+  }
+
+}

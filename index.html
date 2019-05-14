@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+    <script>
+        let w =document.documentElement.clientWidth ;
+        document.documentElement.style.fontSize = w/640*100 +'px';
+    </script>
+    <title>Document</title>
+</head>
+<body>
+<section class="loadingBox   ">
+    <header>
+        <h2>个人简历</h2>
+        <h3>H5场景的交互简历</h3>
+    </header>
+    <div class="progressBox">
+        <div class="progressBar">
+
+        </div>
+    </div>
+
+</section>
+<section class="phoneBox " >
+    <header>
+        <h2>关于我</h2>
+        <h3>尬聊模式</h3>
+        <h4 class="timeBox hidden">00:00</h4>
+
+    </header>
+    <div class="listenBox ">
+        <div class="listenBtn"></div>
+    </div>
+    <div class="no_listenBox">
+        <div class="no_listenBtn">
+
+        </div>
+    </div>
+</section>
+<section class="msgBox">
+    <ul>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                面试官您好，我叫丁超，2015年毕业于南昌大学日语专业。
+            </div>
+        </li>
+        <li class="right">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+                为什么想做前端
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                emmm，耿直的说面向工资编程？（233，其实我们专业很少从事本专业的。毕竟360行，行行出码农，遇事不决转码农）
+            </div>
+        </li>
+        <li class="right btnMsg">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+               你会什么呢
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                毫不谦虚的说，会的确实不多，会些基础款的js,cs,了解vue.希望有面谈的机会深入了解一下。面试题刷了挺多的，感觉可以参加一下面试了。希望能给次机会试炼一下，俗话说得好:光说不练嘴把式，光练不说傻把式，又练又说真把式。
+            </div>
+        </li>
+        <li class="right">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+                webpack会吗？
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                了解过，但···缺乏实战经验
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                没经验和需求经验的矛盾233
+            </div>
+        </li>
+        <li class="right">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+                你认为你的优点在于哪？和其他人对比，公司为啥要录用你！
+            </div>
+        </li>
+        <li>
+            <div>
+                <img src="./images/message-head1.png" alt="">
+                肯吃苦、肯加班、能力高、要钱少...这些够吗?（都这样说）
+            </div>
+        </li>
+        <li class="right">
+            <div>
+                <img src="./images/message-head2.png" alt="">
+                来吧！先面试看看
+            </div>
+        </li>
+    </ul>
+    <div class="keyBoard">
+        <div class="textBox"></div>
+        <div class="btn"></div>
+    </div>
+
+</section>
+<section class="audio">
+    <audio src="audio/bell.mp3" preload="none" id="bell" loop></audio>
+    <audio src="audio/say.mp3" preload="none" id="say"></audio>
+    <audio src="audio/music.mp3" preload="none" id="music" loop></audio>
+</section>
+
+
+
+    <script src="zepto.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
